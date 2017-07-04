@@ -1,0 +1,36 @@
+定位：
+一：1.相对定位:相对于自己的四条边去定位；
+       position: relative;
+
+    2.绝对定位：
+       position:absolute;
+     （1）相对于（有定位属性的父元素）的四条边定位；（距离父元素上下左右分别多少）
+      (2)若父元素无定位属性，则看其父元素的父元素有无定位，若有，则相对于父元素的父元素进行定位；
+         若依然没有定位属性，继续向上找，直到html元素进行定位.
+
+    3.固定定位：依据浏览器定位
+        position:fixed;
+       一直在浏览器的可视范围内的固定位置
+【定位可以随心所欲移动位置，说明它已经不在文档流中了。】
+
+二：定位属性：
+    
+    z-index(定位有若干层，它是用来设置层级的) 
+    层级高的在上面;
+    当层级相同时，后写的在上面;
+    当和文档流中的元素比较时，不小于0层的在上面，（小于0的在下面）;
+    【如果是父子元素关系，无论层级z-index大小如何，子元素都在父元素上面
+
+
+
+
+背景属性以及背景定位：
+
+ background-color:red; 或 rgb(255,0,0); 或 #ff0000;
+
+ background-image:url(7.png);   【背景为图片】
+ background-repeat:no-repeat; /  repeat-x; / repeat-y;【图片不重复/x方向重复/y方向】
+ background-position:top left; /top center; /top right; /bottom left;/center center;/
+                 或：10px 10px; 【X，Y轴位置】
+                 或：50% 50%;【居中】
+ background-attachment:fixed;【将背景图片位置固定在浏览器中某一位置】

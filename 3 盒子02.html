@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+   <style>
+   
+     .auto{width: 200px;
+           height: 200px;
+          }
+     .out{
+     	  width: auto; /*宽是auto时，宽度是父元素的值。*/
+     	  height:auto;/* 高是auto时，高的值由内容撑开。*/
+          border:2px solid black;
+          margin: 0 auto;}
+     .inner{}
+     
+
+
+
+   </style>
+
+
+
+</head>
+<body>
+	<div class="auto">   <div class="out">
+		<div class="inner"></div>
+	    </div>
+	</div>
+</body>
+</html>

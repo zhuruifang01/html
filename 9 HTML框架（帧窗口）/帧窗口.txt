@@ -1,0 +1,11 @@
+帧窗口：
+<frameset></frameset>
+1.不能和<body>共存；
+2
+   <frameset rows="20%,*" border="5">  【分为上下两部分】
+     <frame src="1.html"/>
+     <frame src="2.html"/>
+   </frameset>
+
+  cols【分为左右部分】
+  100px,*

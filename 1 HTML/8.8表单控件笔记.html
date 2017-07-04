@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!--一.表单--><!--控件——-->	
+<form action=""><!--  action:提交。method:post(地址栏提交【安全】)/method:get(快速) -->
+	<input type="text" name="" value="默认值" size="30" disabled="true" maxlength=""> <!-- 文本输入 --> 
+	<input type="password" maxlength="6" > <!-- 密码输入（长度） -->
+	<input type="radio" checked>        <!-- 单选按钮 --><!-- checked 默认选中 -->
+	<input type="checkbox" maxlength="" checked>     <!--复选框-->
+
+  <input type="file"><!-- 上传文件 -->
+	<input type="reset">      <!--重置-->
+	<input type="submit" value="提交"><!-- 提交按钮 -->
+  <input type="button"> <!-- 普通按钮 -->
+
+  <!-- maxlength="" 最大长度 -->
+  <!-- size:限制显示内容的宽度 -->
+
+
+	<!-- disabled="true" 禁止使用 -->
+    <!-- 	readOnly="read" 只读 -->
+</form>
+
+
+<!-- 二，后台交互（可提交）（练习 ）-->
+<form action="">
+
+    <fieldset><!--四。 打包 -->
+	  <legend>个人信息</legend> <!--打包标题 -->
+<!-- 三。label标签 -->  <!-- 点击字就会聚焦到其后面的框中。 -->
+
+
+<label for="xinmin">姓名:</label>  <!-- 通过id名关联 --> <!-- label 点击文字（姓名）可以选中控件 -->
+
+姓名：<input type="text" name="name" id="xinmin" >
+       <br>
+年龄：<input type="text" name="age">
+       <br>
+密码：<input type="password" name="password">
+       <br>
+性别：男：<input type="radio" value="man" name="sex"> 
+      女：<input type="radio" value="woman" name="sex">
+      <br>
+爱好：打代码<input type="checkbox" value="code" name="hobby"> 
+      睡觉<input type="checkbox" value="sleep" name="hobby"> 
+      <br>
+
+    </fieldset>
+<input type="submit" value="提交">
+</form>
+
+<!-- 五.下拉框（控件） -->
+    <select name="" id="" size="2" multiple> <!-- multiple表示可以多选【用ctrl键】
+                      [一次显示的数量]-->
+    	<option> aa </option> <!-- value为aa -->
+      <option value=""> aa </option>
+    	<option value="" selected> bb </option> <!-- selected为默认选中 -->
+    	<option value=""> cc </option>
+    	<option value=""> dd </option>
+    </select>
+    <br>
+<!-- 六.文本域 【多行文本】 -->
+     <textarea name="text" id="" cols="30" rows="10" style="resize:none">
+      <!-- 输入内容（cols是列，rows是行） -->        <!--  禁止拖拽none;x;y -->
+     </textarea>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+
+   <style>
+      div{
+           width: 200px;
+     	   height:200px;
+     	   background:red;
+          }
+
+ /*一.外间距：*/
+       .one{
+             /* margin:20px;*/
+       	     /*margin-top: 20px;  
+       	     margin-bottom: 20px;
+       	     margin-left: 20px;  */
+            /* margin:20px;*/
+       	             /*上下左右*/
+       	    /* margin: 30px 40px;*/
+       	           /*  上下   左右*/
+       	    /* margin: 10px 20px 30px;*/
+       	             /* 上    左右  下 */
+       	    /* margin: 10px 20px 30px 40px;*/
+       	              /*上   右   下   左*/
+       	     margin: 0 auto;/*块元素居中*/
+/*二.边框：*/
+       	     border :1px solid black;
+       	     border-top: 20px solid green;
+
+       	     border-left-width:20px;
+       	     border-left-style:dotted;
+       	        /*none;dotted;dashed;solid;double;groove;ridgr;inset;outset;
+       	          无    点线   虚线   实线  双线   槽线   脊线 内凹   外凸*/
+       	     border-left-color:yellow;
+       	     /*用法和margin相同*/*/
+       	 }
+/*三.内间距：*/
+      div .two{ 
+      			width:50px; 
+      			height: 50px;   
+      		  background:yellow;
+             padding:0 auto; 
+                  
+
+            }
+/*一个块元素在页面中占据的实际宽=
+      border-left + padding-left + width + padding-right + border-right*/
+
+/*四。浮动（变为行内块元素）(可以横排)*/
+    .out { width:500px; 
+            height:200px;   
+            background:red;}
+    .inner1{ width:100px; 
+            height: 200px;   
+            background:black;
+            float:left; 
+            margin-right:20px;
+            }
+    .inner2{ width:100px; 
+            height: 200px;   
+            background:black;
+            float:left; 
+            margin:0px 20px;
+            }
+    .inner3{ width:100px; 
+            height: 200px;   
+            background:black;
+            float:left; 
+             margin:0px 20px;
+          }
+    .inner4{ width:100px; 
+            height: 200px;   
+            background:black;
+            float:left; }
+            
+
+  </style>
+</head>
+<body>
+	<div class="one">第一块 <div class="two">sdafasdf</div> </div>
+	<div class="out"> <div class="inner1"></div>  
+                    <div class="inner2"></div>  
+                    <div class="inner3"></div>  
+                    <div class="inner4"></div>  
+  </div>
+
+
+
+</body>
+</html>

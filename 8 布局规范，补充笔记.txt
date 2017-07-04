@@ -1,0 +1,195 @@
+
+
+【网站：W3school】
+     【菜鸟教程】
+
+
+1.初始化（通用选择器）
+  body,p,ul,ol,dl,li,dt,dd,h1,h2,h3,h4,h5,h6,form,input
+ {padding: 0;
+  margin: 0;
+  list-style: none;
+  font-weight: normal;
+  }
+a{
+	text-decoration: none;
+ }
+img{
+	border:0;
+    }
+
+
+2.页面中所有块元素必须设置宽高。
+
+3.标签不能随意嵌套，按默认结构去写。
+
+4.设置层级时，如果不能正常显示，可以给其父元素改变z-index
+
+5.改变样式时，不能用标签选择器
+
+6.图片必须设置宽高属性
+7.浮动：（即 可横排，还可设宽高）
+
+ALT+SHIFT+2(出现两个屏幕)
+
+-------------------------------------------------------------------------------------------------
+head content（命名）
+纸版作业：浮动、margin、background笔记 position
+-------------------------------------------------------------------------------------------------
+
+写页面规则：第一步分块，用合适的标签
+
+
+###四层原则：
+ 作用于：每一个HTML元素；
+ 第一层：背景层（油漆层）【0层】       background-color;background-image;
+
+ 第二层：文档层 （左上角吸附原则）【0到1层】
+
+ 第三层：浮动层 【0.5层】
+         一个元素浮动之后，可（横排；设置宽高）
+
+ 第四层：定位层 z-index;
+
+        固定定位 fixed
+        相对定位 relative (实际上在文档中还是占据位置的)
+        绝对定位 absolute
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+CSS补充笔记01：
+
+1. 同一位置插入两张图片：
+ background-image:url(1.jpg),url(2.jpg);
+ background-repeat:no-repeat,no-repeat;
+ background-position:20px 30px,20px 30px;
+
+2.透明度：【他的子元素也继承其透明度】
+    opacity：
+    0透明1不透明，0.5半透明【0到1】
+
+   background-color:rgba(255,0,0,0.4);【子元素不继承其透明性，但是不兼容】【不允许用】
+
+3.cursor:pointer;(鼠标指向时变手形)
+        :help;    (变问号)
+        ：wait;
+
+4.min-width:500px;  这个元素最小500像素。（缩小屏幕框时<500载不能缩小，此时会出现滚动条）
+  max-width:500px;   最大500px
+
+  min-height:100px
+  max-height:200px;
+
+5.vertical-align:sub;  /super;【文字的下标/上标】
+                ：bottom；【元素底对齐】
+==============================================================================================
+CSS补充笔记02：
+
+
+1.父元素中的子元素（水平居中）：
+    若子元素是盒子（块元素）,则在子元素加：margin:0 auto;
+      子元素是文字（行元素） 则在父元素加：text-align:center;
+
+2.display:block;【变为块元素】
+
+3.图片精灵  
+
+4.CSS之列表属性：
+    list-style-type:circle;空心圆点
+                 disc；黑圆点
+    list-style-position:inside;
+                        outside;
+    list-style-image:url();
+
+5.filter=alpha(opacity=80)  透明度为80
+
+6.越具体优先级越高；
+
+7.CSS中：
+  （1.） 文字：font-size / color / line-height(所占行高)
+         对齐方式： text-align:center; (在其父元素中写)
+  （2.）背景：background-color / background-image
+ 
+ 表格：
+
+   (1.) 边框：border  【若在表格中使用：只能用于 table th td】
+        间距：margin  【              ：table caption】
+        内间距：padding【             ：th td】  
+        宽高：width/height【          ：table th td】
+        height :可用于tr并且优先级高于td
+  
+  （2.）指定边框是否合并：
+        
+        border-collapse:separate;【(默认)分开】
+
+        border-collapse:collapse;【合并】
+----------------------------------------------------------       
+-----------------------------------------------------------
+*******当a标签中包含一个图片img(src)  时，要求：
+                              在a的css中：display：block；
+                              同时给a设置宽高；
+----------------------------------------------
+浏览器兼容性问题：
+ 
+1.链接时包含图片时出现了一个边框：     
+   解决： img{border:0;}
+
+2.当div中包含一张图片，可能出现空隙问题；
+   法一：  img{ vertical-align:top;或bottom;}
+   法二：  将图片变为块元素：  display:block;
+   法三：  将包含图片的父元素的文字字体设为0：font-size:0;
+
+
+【IE6中的bug】
+3.ie6双倍边距Bug问题：
+           子元素进行左浮动且加上左外间距margin是，每行的第一个子元素会加成双倍的margin;
+                     右          右                                                    ；
+   解决：左浮动+右间距
+   法二：子元素中：display:inline;
+   法三：对第一个子元素的外间距缩小一半 【 _margin-right:】
+
+4.ie6不支持固定定位（position:fixed;）的问题。
+   解决：加入一段代码(百度里查一下)
+
+5.ie6中png图片不支持透明问题。
+    解决：加入一段代码(百度里查一下)
+
+6.ie6中margin  子元素超出部分的出血效果无法实现问题
+    解决：position:relative;
+
+------------
+  marquee标签：【文字滚动效果】
+ （1.）方式：<marquee behavior="">aaaaaa</marquee>
+  (2.) 方向：<marquee direction="">
+ （3.）次数: <marquee loop="2">
+  (4.) 区间  <marquee width="">
+             <marquee height="">
+             
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,42 @@
+
+/*
+标签名选择器*/
+div{
+	width:200px;
+    height:200px;
+    background:red;
+    border :1px solid black;
+
+}
+
+p{
+	width:100px;
+    height:100px;
+    background:red;
+    border :3px solid black;}
+
+/*
+类名选择器（同一个元素可以添加多个类名；同一个类名可赋给多个元素） */        
+/*.类名*/
+.two{
+	background:blue;
+}
+.aa{
+	background:green;
+}
+
+/*
+id选择器(一个页面中，一个id名只能使用一次)*/
+/*#id名*/
+#aaa{
+	width:400px;
+    }
+
+/*交叉选择器*/
+p.two{background: black;}
+p#aaa{height:400px;}
+
+/*后代选择器*/
+div .two{background: purple;}  /*注：div和.之间有个空格*/
+/*应用于后代子元素中有two的div标签。*/
+
